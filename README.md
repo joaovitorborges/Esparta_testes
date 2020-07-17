@@ -1,4 +1,4 @@
-# Esparta_testes_logica
+# Esparta_testes
 3 Testes de lógica para a candidatura de uma vaga de estágio na empresa Esparta
 
 Cada teste está em uma pasta separada com seu próprio projeto, a solução se encontra em src/Solution.java
