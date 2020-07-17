@@ -1,6 +1,8 @@
 # Esparta_testes_logica
 3 Testes de lógica para a candidatura de uma vaga de estágio na empresa Esparta
 
+Cada teste está em uma pasta separada com seu próprio projeto, a solução se encontra em src/Solution.java
+
 ## Challenge 1
 Given an array A consisting of N integers, being N an odd number, return the value of the unpaired element.
 
