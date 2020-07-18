@@ -1,0 +1,33 @@
+# formato MYSQL
+
+# Buscar os nomes de todos os alunos que frequentam alguma turma do professor 'JOAO PEDRO'.
+select A.Nome as aluno
+from ALUNO A, ALUNO_TURMA AT, TURMA T, PROFESSOR P
+where A.id = AT.aluno_id and  T.id = AT.turma_id and P.id = TURMA.PROFESSOR_id and P.nome = 'JOAO PEDRO'
+
+
+# Buscar os dias da semana que tenham aulas da disciplina 'MATEMATICA'.
+select T.dia_da_semana as dias
+from TURMA T, DISCIPLINA D
+where TURMA.DISCIPINA_id = D.id and D.nome = 'MATEMATICA'
+
+
+# Buscar todos os alunos que frequentem aulas de 'MATEMATICA' e também 'FISICA'.
+select A.Nome as aluno
+from ALUNO A, ALUNO_TURMA AT, TURMA T, DISCIPLINA D
+where A.id = AT.aluno_id and AT.turma_id = T.id and T.DISCIPLINA_id = D.id and (D.nome = 'MATEMATICA' or d.nome = 'FISICA')
+
+# Buscar as disciplinas que não tenham nenhuma turma.
+select D.nome as disciplina
+from DISCIPLINA D, TURMA T
+where D.id not in T.DISCIPLINA_id
+
+
+# Buscar os alunos que frequentem aulas de 'MATEMATICA' exceto os que frequentem 'QUIMICA'
+select A.nome as aluno
+from ALUNO A, ALUNO_TURMA AT, TURMA T, DISCIPLINA D
+where A.id = AT.aluno_id and AT.turma_id = T.id and D.id = DISCIPLINA_id and D.nome = 'MATEMATICA'
+not in
+select A.nome as aluno
+from ALUNO A, ALUNO_TURMA AT, TURMA T, DISCIPLINA D
+where A.id = AT.aluno_id and AT.turma_id = T.id and D.id = DISCIPLINA_id and D.nome = 'QUIMICA'
