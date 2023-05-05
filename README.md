@@ -1,9 +1,8 @@
-# Esparta_testes
-3 Testes de lógica para a candidatura de uma vaga de estágio na empresa Esparta
+# Esparta_tests
+3 Logic tests for trainee internship application on Sparta company
 
-Cada teste está em uma pasta separada com seu próprio projeto, a solução se encontra em src/Solution.java.
-
-O teste referente ao banco de dados está em formato .TXT, e no padrão MySql.
+Each test is in a separate folder with its own project, the solution is found in src/Solution.java.
+The test referring to the database is in .TXT format, in MySql standard.
 
 ## Challenge 1
 Given an array A consisting of N integers, being N an odd number, return the value of the unpaired element.
